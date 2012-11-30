@@ -20,25 +20,34 @@ the directory with benchmark files, that have a mask
 `^bench_*.erl$`. And the dragons will appear...
 
 Those files will be:
+
 1. enumerated
+
 2. compiled
+
 3. loaded
+
 4. inited by calling Mod:init/0
+
 5. measured the call for Mod:test/0
+
 6. terminated with the Mod:terminate/1
 
-Then all the produced results will be aggregated *(the benchmarking
-session can repeatedly run the modules if you use
-`bencharka:start/1`)* and printed.
+
+Then all the produced results will be aggregated and printed *(the
+benchmarking session can repeatedly run the modules if you use
+`bencharka:start/1`)*.
+
+**Finally** you can wrap-up a shell script and a Makefile for runing benchmarks automatically, like in the [example](https://github.com/aleksandr-vin/lager_bench).
 
 
-Why not X
----------
+Why not X?
+----------
 
 I prefer to use smth. already being developed, but in this case I
-can't figure out the task of the benchmarking using EUnit tests or
-Common Tests. May be later I master them and switch from this project
-but for now it simply works!
+can't figure out the task of the benchmarking being solved using EUnit
+Tests or Common Tests. May be later I master them and switch from this
+project but for now it just works!
 
 
 Contribution
