@@ -71,7 +71,7 @@ aggregate_result(LR) ->
 
 norm(T) when is_number(T) ->
     %%norm(T, us).
-    {seconds, T / 1000}.
+    {ms, T / 1000}.
 
 norm(T, us) when is_integer(T) and 0 =:= T rem 1000->
     norm(T div 1000, ms);
