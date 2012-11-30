@@ -1,0 +1,12 @@
+{application, bencharka,
+ [
+  {description, "Bencharka"},
+  {vsn, git},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { bencharka_app, []}},
+  {env, []}
+ ]}.
